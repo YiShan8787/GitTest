@@ -37,7 +37,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.divided(9, 3), 3)
 
     def test_int2_divided(self):
-        self.assertEqual(calculator.divided(9, 0), "無限")
+        self.assertEqual(calculator.divided(9, 0), "hehehehehe")
 
     def test_float_divided(self):
         self.assertEqual(calculator.divided(5.4, 3), 1.8)
