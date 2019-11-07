@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<!-- Fig. 3.1: newforminputtypes.html -->
+<!-- New HTML5 form input types and attributes. -->
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>New HTML5 Input Types</title>
+   </head>
+
+   <body>
+      <h1>New HTML5 Input Types Demo</h1>
+      <p>This form demonstrates the new HTML5 input types
+         and the placeholder, required and autofocus attributes.
+      </p>
+
+      <form method = "get" action = "http://140.121.197.131:7602/showForm.jsp">
+		 <p>
+            <label>Your name:
+               <input name="fullname" type = "fullname" /> 
+                  
+            </label>
+         </p>
+		 <p>
+            <label>Your email:
+               <input name="email" type = "email" placeholder = "name@domain.com" 
+                  required /> (name@domain.com)
+            </label>
+         </p>
+		 <p>
+            <label>Your homepage's URL:
+               <input name="url" type = "url" 
+                  placeholder = "http://www.domainname.com" required /> 
+                  (http://www.domainname.com)
+            </label>
+         </p>
+		 <p>
+            <label>Your birthdat date:
+               <input name="date" type = "date" /> 
+                  (yyyy-mm-dd)
+            </label>
+         </p>
+         <p>
+            <label>Your favorite color:
+               <input name="color" type = "color" autofocus /> 
+                  (Hexadecimal code such as #ADD8E6)
+            </label>
+         </p>
+         <p>
+            <strong>Check off all of the characteristics that you enjoyed about the college:</strong><br>
+
+            <label>
+               <input name = "likes" type = "checkbox" 
+                  value = "Campus">Campus</label>
+            <label>
+               <input name = "likes" type = "checkbox" 
+                  value = "Students">Students</label>
+            <label>
+               <input name = "likes" type = "checkbox" 
+                  value = "Location">Location</label> 
+            
+         </p>
+		 <p>
+            <strong>How did you become interested in our college?:</strong><br>
+
+            <label>
+               <input name = "interest" type = "radio"
+                  value = "Friends" checked>Friends</label>
+            <label>
+               <input name = "interest" type = "radio" 
+                  value = "Television">Television</label> 
+            <label>
+               <input name = "interest" type = "radio" 
+                  value = "Internet">Internet</label>
+            
+         </p>
+            <input type = "submit" value = "Submit" />
+            <input type = "reset" value = "Clear" />
+         </p>   
+      </form>
+   </body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->
