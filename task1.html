@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<!-- Fig. 2.13: table2.html -->
+<!-- Complex HTML5 table. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Tables</title>
+   </head>
+
+   <body>
+      <h1>HW1: Spanning Rows and Columns</h1>
+ 
+      <table border = "1" width=50%>
+         <caption>This is a partial table</caption>
+
+         <thead>
+            <!-- rowspans and colspans merge the specified -->
+            <!-- number of cells vertically or horizontally -->
+            <tr>
+			   <!-- merge four columns -->
+               <th colspan = "4">
+				  <br>
+                  <font size="5"><strong>NTOU CS Timetable</strong></font><br>
+                  <br>
+               </th>
+               <!-- merge two rows -->
+               
+
+               <!-- merge four columns -->
+               
+            </tr>
+            <tr>
+               <td>		#		</td>
+               <th>Time</th>
+               <th>Course name</th>
+               <th>Lecturers</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>6</td>
+               <td>13:10~14:00</td>
+               <!-- merge two rows -->
+               <td rowspan = "3">
+                  程式設計
+               </td>
+               <td rowspan = "3">
+                  <ul>
+					<li>丁培毅</li>
+					<li>張清圳</li>
+					<li>林川傑</li>
+					<li>張光遠</li>
+				  </ul>
+               </td>
+               
+            </tr>
+            <tr>
+               <td>7</td>
+               <td>14:10~15:00</td>
+               
+               
+               
+            </tr>
+			<tr>
+               <td>8</td>
+               <td>15:10~16:00</td>
+               
+               
+               
+            </tr>
+			<tr>
+			   <!-- merge four columns -->
+               <th colspan = "4">
+				  <br>
+				  <a href="http://www.cs.ntou.edu.tw">
+					<img src = "ntoucs.jpg" width = "80" 
+                     height = "80" >
+				  </a>
+                  <br>
+				  <text>
+				  &#169
+				  2018
+				  <a href="https://www.google.com.tw/search?q=%E6%B5%B7%E5%A4%A7%E8%B3%87%E5%B7%A5">
+				  海大資工
+				  </a>
+				  </text>
+               </th>
+               <!-- merge two rows -->
+               
+
+               <!-- merge four columns -->
+               
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->
