@@ -26,7 +26,7 @@ script:
 deploy:
   provider: heroku
   api_key: 
-    secure: $HEROKU_API_KEY
+    secure: 88c3cf99-eb36-4bf1-bea1-3987e6fa40d6
   app: git-test1
   on:
     repo: YiShan8787/GitTest
