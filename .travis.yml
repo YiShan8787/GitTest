@@ -25,9 +25,9 @@ script:
 
 deploy:
   provider: heroku
-  api_key:
+  api_key: 88c3cf99-eb36-4bf1-bea1-3987e6fa40d6
     secure: $HEROKU_API_KEY
-  app: test-my-travisci-project
+  app: git-test1
   on:
-    repo: jimting/GitProjectTutorialExample
+    repo: YiShan8787/GitTest
     
