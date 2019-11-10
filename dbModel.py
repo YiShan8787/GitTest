@@ -5,7 +5,7 @@ from flask_migrate import Migrate, MigrateCommand
 
 app = Flask(__name__)
 app.config[
-    'SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:root@localhost/myDbName"
+    'SQLALCHEMY_DATABASE_URI'] = "mysql://username:password@server/db"
 
 
 db = SQLAlchemy(app)
