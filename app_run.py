@@ -1,41 +1,50 @@
-from flask import *
-from datetime import datetime
-from dbModel import *
-
+from flask import Flask, request, jsonify
 app = Flask(__name__)
 
+@app.route('/getmsg/', methods=['GET'])
+def respond():
+    # Retrieve the name from url parameter
+    name = request.args.get("name", None)
 
+    # For debugging
+    print(f"got name {name}")
+
+    response = {}
+
+    # Check if user sent a name at all
+    if not name:
+        response["ERROR"] = "no name found, please send a name."
+    # Check if the user entered a number not a name
+    elif str(name).isdigit():
+        response["ERROR"] = "name can't be numeric."
+    # Now the user entered a valid name
+    else:
+        response["MESSAGE"] = f"Welcome {name} to our awesome platform!!"
+
+    # Return the response in json format
+    return jsonify(response)
+
+@app.route('/post/', methods=['POST'])
+def post_something():
+    param = request.form.get('name')
+    print(param)
+    # You can add the test cases you made in the previous function, but in our case here you are just testing the POST functionality
+    if param:
+        return jsonify({
+            "Message": f"Welcome {name} to our awesome platform!!",
+            # Add this option to distinct the POST request
+            "METHOD" : "POST"
+        })
+    else:
+        return jsonify({
+            "ERROR": "no name found, please send a name."
+        })
+
+# A welcome message to test our server
 @app.route('/')
-@app.route('/index')
 def index():
-    data = "Deploying a Flask App To Heroku"
-    data_UserData = UserData.query.all()
-    history_dic = {}
-    history_list = []
-    for _data in data_UserData:
-        history_dic['Name'] = _data.Name
-        history_dic['Id'] = _data.Id
-        history_dic['Description'] = _data.Description
-        history_dic['CreateDate'] = _data.CreateDate.strftime('%Y/%m/%d %H:%M:%S')
-        history_list.append(history_dic)
-        history_dic = {}
-    return render_template('index.html', **locals())
-
-
-@app.route('/API/add_data', methods=['POST'])
-def add_data():
-    name = request.form['name']
-    description = request.form['description']
-    if name != "" and description != "":
-        add_data = UserData(
-            Name=name,
-            Description=description,
-            CreateDate=datetime.now()
-        )
-        db.session.add(add_data)
-        db.session.commit()
-    return redirect(url_for('index'))
-
+    return "<h1>Welcome to our server !!</h1>"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Threaded option to enable multiple instances for multiple user access support
+    app.run(threaded=True, port=5000)
